@@ -11,8 +11,7 @@ import random
 
 
 def proof_of_work(last_proof):
-    """
-    Multi-Ouroboros of Work Algorithm
+    """ Multi-Ouroboros of Work Algorithm
     - Find a number p' such that the last six digits of hash(p) are equal
     to the first six digits of hash(p')
     - IE:  last_hash: ...AE9123456, new hash 123456888...
@@ -24,7 +23,11 @@ def proof_of_work(last_proof):
 
     print("Searching for next proof")
     proof = 0
-    #  TODO: Your code here
+
+    # hash last proof
+
+    # while valid_proof(last_hash, proof) is False:
+    # increment proof
 
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
     return proof
@@ -38,9 +41,7 @@ def valid_proof(last_hash, proof):
 
     IE:  last_hash: ...AE9123456, new hash 123456E88...
     """
-
-    # TODO: Your code here!
-    pass
+    # return if the hashed proof equals the correct characters on the lash_hash
 
 
 if __name__ == '__main__':
